@@ -13,6 +13,7 @@ app.use(express.static("public"))
 
 app.get("/messages", (req, res) => res.json(messagesDatabase))
 
+
 io.on("connection", (socket)=>{
     console.log(`User Connected: ${socket.id}`)
 
